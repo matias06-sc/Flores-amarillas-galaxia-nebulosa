@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!-- DEDICA:META -->
+    <title>Día de las Flores Amarillas</title>
+    <meta name="description" content="Una galaxia sencilla con agujero negro, anillo dorado y fotos flotando entre frases del Día de las Flores Amarillas.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌻</text></svg>">
+    <!-- DEDICA:PRELOAD -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <canvas id="c"></canvas>
+
+    <h1 id="main-title"></h1>
+
+    <div id="start-screen">
+        <div class="intro-stars" aria-hidden="true">
+            <span class="intro-star s1"></span>
+            <span class="intro-star s2"></span>
+            <span class="intro-star s3"></span>
+            <span class="intro-star s4"></span>
+            <span class="intro-star s5"></span>
+            <span class="intro-star s6"></span>
+            <span class="intro-star s7"></span>
+            <span class="intro-star s8"></span>
+        </div>
+
+        <div class="intro-nebula nebula-one" aria-hidden="true"></div>
+        <div class="intro-nebula nebula-two" aria-hidden="true"></div>
+
+        <div class="intro-orbit orbit-one" aria-hidden="true"></div>
+        <div class="intro-orbit orbit-two" aria-hidden="true"></div>
+
+        <div class="intro-content">
+            <div class="intro-badge">
+                <span class="badge-dot"></span>
+                Un pequeño universo para ti
+                <span class="badge-dot"></span>
+            </div>
+
+            <div id="start-heart" aria-hidden="true">
+                <span class="flower-aura"></span>
+                <canvas id="start-flower" width="256" height="256" aria-hidden="true"></canvas>
+            </div>
+
+            <div class="intro-copy">
+                <p class="intro-kicker">DÍA DE LAS FLORES AMARILLAS</p>
+                <h2>Hay algo bonito<br><span>esperándote ahí dentro</span></h2>
+                <p class="intro-description">
+                    Un pequeño rincón hecho de estrellas, flores,<br class="desktop-break">
+                    recuerdos y unas palabras para ti.
+                </p>
+            </div>
+
+            <div id="start-text" role="button" aria-label="Toca para iniciar">
+                <span class="start-button-glow"></span>
+                <span class="start-button">
+                    <span class="start-button-icon">✦</span>
+                    Toca para entrar
+                    <span class="start-button-arrow">→</span>
+                </span>
+                <span class="start-hint">La música comienza al entrar</span>
+            </div>
+        </div>
+
+        <div class="intro-footer" aria-hidden="true">
+            <span>✦</span>
+            <span>hecho con cariño</span>
+            <span>✦</span>
+        </div>
+    </div>
+
+    <audio id="audio" loop>
+  <source src="assets/musica.mp3" type="audio/mpeg">
+</audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.148.0/build/three.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

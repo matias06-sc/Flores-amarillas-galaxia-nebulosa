@@ -1,0 +1,38 @@
+const DEFAULTS = {
+            titulo: "",
+            frases: [
+                "Qué bueno tener una amiga como tú",
+                "Gracias por estar en las buenas y en las no tan buenas",
+                "Una flor amarilla para una gran amiga",
+                "Tu amistad hace más chéveres los días",
+                "Que nunca te falten motivos para sonreír",
+                "Gracias por las risas y las buenas conversaciones",
+                "Hoy toca celebrar la amistad y los buenos momentos",
+                "Me alegra poder contar contigo",
+                "Una pequeña flor para una amiga increíble",
+                "Gracias por ser siempre tú",
+                "Que este detalle te saque una sonrisa",
+                "Por todas las ocurrencias que hemos compartido",
+                "Tener una buena amiga también es un regalo",
+                "Gracias por hacer más divertidos los días",
+                "Que sigas brillando a tu manera",
+                "Un detalle amarillo para recordarte lo genial que eres",
+                "Por todas las veces que nos hemos matado de risa",
+                "Espero que tengas un día bonito",
+                "Gracias por cada momento compartido",
+                "Una amistad así siempre se aprecia",
+                "Que nunca falten buenos recuerdos por crear",
+                "Por las conversaciones que empiezan con una cosa y terminan en cualquier otra",
+                "Me alegra coincidir contigo en esta vida",
+                "Un girasol para una amiga que se merece un buen detalle",
+                "Gracias por escuchar, apoyar y aguantar mis ocurrencias",
+                "Que hoy te consientan un poquito",
+                "Por más risas, aventuras y momentos random",
+                "Tu amistad vale un montón",
+                "Espero que este pequeño detalle te alegre el día",
+                "Feliz Día de las Flores Amarillas, amiga"
+            ],
+            fotos: ["assets/img1.png", "assets/img2.png", "assets/img3.png"],
+            musica: "assets/musica.mp3"
+        };
+        const CONFIG = (window.DEDICA && window.DEDICA.merge) ? window.DEDICA.merge(DEFAULTS, window.DEDICA.config) : DEFAULTS;
