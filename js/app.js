@@ -10,10 +10,34 @@
             canvas,
             antialias: true
         });
+
         renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
         renderer.setSize(innerWidth, innerHeight);
+
         const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, 0.1, 5000);
+
+        const camera = new THREE.PerspectiveCamera(
+            60,
+            innerWidth / innerHeight,
+            0.1,
+            5000
+        );
+
+        // ================= Ajuste de pantalla / F11 =================
+        function resizeGalaxy() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(width, height);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+        }
+
+        window.addEventListener('resize', resizeGalaxy);
+        window.addEventListener('orientationchange', resizeGalaxy);
+
         let targetDist = 300,
             currentDist = 300,
             rotX = 0.2,
